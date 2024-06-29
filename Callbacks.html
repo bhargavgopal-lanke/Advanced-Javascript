@@ -13,6 +13,25 @@
       setTimeout(function () {
         console.log("callback");
       }, 5000);
+
+      // callback example
+      const cart = ["shoes", "cars", "bikes"];
+
+      // api's are dependent on one after the other
+      // this type of code structure is unreadable and unmaintainable.
+      // inversion of control
+      api.createOrder(cart, function () {
+
+          api.proceedToPayment(function () {
+
+              api.showSummaryPage(function () {
+
+                api.updateToWallet();
+              });
+
+          });
+
+      });
     </script>
   </body>
 </html>
