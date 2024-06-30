@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promises</title>
+  </head>
+  <body>
+    <script>
+      const cart = ["shoes", "pants", "lehanga"];
+
+      createOrder(cart, function () {
+        proceedToPayment(orderId);
+      });
+
+      const promise = createOrder(cart);
+
+      promise.then(function (orderId) {
+        proceedToPayment(orderId);
+      });
+
+      
+
+
+    </script>
+  </body>
+</html>
