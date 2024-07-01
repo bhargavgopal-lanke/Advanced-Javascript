@@ -28,11 +28,28 @@
       console.log("userObject", userObject);
 
       // this is another way to create a promise
-
+      // Producer end
       // resolve and reject parameters are given by javascript.
 
       function createOrder() {
-        const promise = new Promise(function (resolve, reject) {});
+        const promise = new Promise(function (resolve, reject) {
+          // so our promise should return a success or failure.
+
+          // create order
+          // validate order
+          // orderId
+          if (!validateCart(cart)) {
+            const err = new Error("Cart is not valid");
+            reject(err);
+          }
+
+          // logic for create order
+          const orderId = "12345";
+          if (orderId) {
+            resolve(orderId);
+          }
+        });
+        return promise;
       }
     </script>
   </body>
