@@ -27,16 +27,21 @@
           });
         });
       });
+
+      
     // callback hell with promise
       createOrder(cart)
+      // what ever is the response of createOrder should pass into this below chain
         .then(function (orderId) {
-          proceedToPayment(orderId);
+         return proceedToPayment(orderId);
         })
+        // whatever is the response of proceedToPayment should pass into the below chain
         .then(function (paymentInfo) {
-          showSummaryPage(paymentInfo);
+          return showSummaryPage(paymentInfo);
         })
+        // whatever is the response of showSummaryPage should pass into the below chain
         .then(function (paymentInfo) {
-          updateWalletBalance(paymentInfo);
+          return updateWalletBalance(paymentInfo);
         });
     </script>
   </body>
