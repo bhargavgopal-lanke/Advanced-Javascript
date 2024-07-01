@@ -28,12 +28,11 @@
         });
       });
 
-      
-    // callback hell with promise
+      // callback hell with promise
       createOrder(cart)
-      // what ever is the response of createOrder should pass into this below chain
+        // what ever is the response of createOrder should pass into this below chain
         .then(function (orderId) {
-         return proceedToPayment(orderId);
+          return proceedToPayment(orderId);
         })
         // whatever is the response of proceedToPayment should pass into the below chain
         .then(function (paymentInfo) {
@@ -43,6 +42,13 @@
         .then(function (paymentInfo) {
           return updateWalletBalance(paymentInfo);
         });
+
+      // callback hell with promise and arrow functions
+
+      createOrder(orderId)
+        .then((orderId) => proceedToPayment(orderId))
+        .then((paymentInfo) => showSummaryPage(paymentInfo))
+        .then((paymentInfo) => updateWalletBalance(paymentInfo));
     </script>
   </body>
 </html>
