@@ -9,19 +9,25 @@
     <script>
       const cart = ["shoes", "pants", "lehanga"];
 
-      createOrder(cart, function () {
-        proceedToPayment(orderId);
-      });
+      //   createOrder(cart, function () {
+      //     proceedToPayment(orderId);
+      //   });
 
-      const promise = createOrder(cart);
+      //   const promise = createOrder(cart);
 
-      promise.then(function (orderId) {
-        proceedToPayment(orderId);
-      });
+      //   promise.then(function (orderId) {
+      //     proceedToPayment(orderId);
+      //   });
+
+      const gitHubUrl = "https://api.github.com/users/akshaymarch7";
+
+      let response;
+      // fetch functions return us a prmoise
+      const userObject = fetch(gitHubUrl);
+
+      console.log("userObject", userObject);
 
       
-
-
     </script>
   </body>
 </html>
