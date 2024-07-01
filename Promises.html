@@ -9,16 +9,6 @@
     <script>
       const cart = ["shoes", "pants", "lehanga"];
 
-      //   createOrder(cart, function () {
-      //     proceedToPayment(orderId);
-      //   });
-
-      //   const promise = createOrder(cart);
-
-      //   promise.then(function (orderId) {
-      //     proceedToPayment(orderId);
-      //   });
-
       const gitHubUrl = "https://api.github.com/users/akshaymarch7";
 
       let response;
@@ -26,6 +16,16 @@
       const userObject = fetch(gitHubUrl);
 
       console.log("userObject", userObject);
+
+      const promise = createOrder(cart);
+
+      promise
+        .then(function (orderId) {
+          console.log(orderId);
+        })
+        .catch(function (err) {
+          console.log(err.message);
+        });
 
       // this is another way to create a promise
       // Producer end
@@ -46,14 +46,16 @@
           // logic for create order
           const orderId = "12345";
           if (orderId) {
-            resolve(orderId);
+            setTimeout(function () {
+              resolve(orderId);
+            }, 5000);
           }
         });
         return promise;
       }
 
       function validateCart(cart) {
-        return true;
+        return false;
       }
     </script>
   </body>
