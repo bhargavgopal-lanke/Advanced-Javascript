@@ -20,18 +20,24 @@
       // api's are dependent on one after the other
       // this type of code structure is unreadable and unmaintainable.
       // inversion of control
-      api.createOrder(cart, function () {
-
-          api.proceedToPayment(function () {
-
-              api.showSummaryPage(function () {
-
-                api.updateToWallet();
-              });
-
+      api.createOrder(cart, function (orderId) {
+        api.proceedToPayment(orderId, function (paymentInfo) {
+          api.showSummaryPage(paymentInfo, function () {
+            api.updateWalletBalance();
           });
-
+        });
       });
+    // callback hell with promise
+      createOrder(cart)
+        .then(function (orderId) {
+          proceedToPayment(orderId);
+        })
+        .then(function (paymentInfo) {
+          showSummaryPage(paymentInfo);
+        })
+        .then(function (paymentInfo) {
+          updateWalletBalance(paymentInfo);
+        });
     </script>
   </body>
 </html>
