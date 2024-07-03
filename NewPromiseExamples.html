@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>promises</title>
+  </head>
+  <body>
+    <script>
+      const p1 = new Promise((resolve, reject) => {
+        setTimeout(() => resolve("P1 sucess"), 3000);
+      });
+
+      const p2 = new Promise((resolve, reject) => {
+        setTimeout(() => resolve("p2 success"), 1000);
+      });
+
+      const p3 = new Promise((resolve, reject) => {
+        setTimeout(() => resolve("p3 success"), 2000);
+      });
+    </script>
+  </body>
+</html>
