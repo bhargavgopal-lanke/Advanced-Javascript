@@ -34,6 +34,7 @@
 
       // promise.allsetteled example
       // it'll wait for all the promises and return the combined result.
+      // it's only return the results once all the promises are resolved.
       Promise.allSettled([p1, p2, p3])
         .then((res) => {
           console.log(res);
