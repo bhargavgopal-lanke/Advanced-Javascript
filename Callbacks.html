@@ -20,13 +20,13 @@
       // api's are dependent on one after the other
       // this type of code structure is unreadable and unmaintainable.
       // inversion of control
-      api.createOrder(cart, function (orderId) {
-        api.proceedToPayment(orderId, function (paymentInfo) {
-          api.showSummaryPage(paymentInfo, function () {
-            api.updateWalletBalance();
-          });
-        });
-      });
+      // api.createOrder(cart, function (orderId) {
+      //   api.proceedToPayment(orderId, function (paymentInfo) {
+      //     api.showSummaryPage(paymentInfo, function () {
+      //       api.updateWalletBalance();
+      //     });
+      //   });
+      // });
 
       // callback hell with promise
       createOrder(cart)
@@ -40,15 +40,23 @@
         })
         // whatever is the response of showSummaryPage should pass into the below chain
         .then(function (paymentInfo) {
-          return updateWalletBalance(paymentInfo);
+          console.log(paymentInfo)
+        })
+        .catch(function(err) {
+          console.log(err.message);
         });
+
+
+        function createOrder(cart) {
+
+        }
 
       // callback hell with promise and arrow functions
 
-      createOrder(orderId)
-        .then((orderId) => proceedToPayment(orderId))
-        .then((paymentInfo) => showSummaryPage(paymentInfo))
-        .then((paymentInfo) => updateWalletBalance(paymentInfo));
+      // createOrder(orderId)
+      //   .then((orderId) => proceedToPayment(orderId))
+      //   .then((paymentInfo) => showSummaryPage(paymentInfo))
+      //   .then((paymentInfo) => updateWalletBalance(paymentInfo));
     </script>
   </body>
 </html>
