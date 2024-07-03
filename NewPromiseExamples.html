@@ -7,7 +7,7 @@
   </head>
   <body>
     <script>
-        // dummy promises
+      // dummy promises
       const p1 = new Promise((resolve, reject) => {
         setTimeout(() => resolve("P1 sucess"), 3000);
       });
@@ -21,11 +21,12 @@
         setTimeout(() => resolve("p3 success"), 2000);
       });
 
-
       // after 3 secs it'll give the all success promises result
-      Promise.all([p1, p2, p3]).then((res) => {
-        console.log(res);
-      });
+      Promise.all([p1, p2, p3])
+        .then((res) => {
+          console.log(res);
+        })
+        .catch((err) => console.log(err));
     </script>
   </body>
 </html>
