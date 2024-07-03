@@ -13,6 +13,7 @@ const p3 = new Promise((resolve, reject) => {
   setTimeout(() => reject("p3 fail"), 2000);
 });
 
+// promise.all example
 // after 3 secs it'll give the all success promises result
 Promise.all([p1, p2, p3])
   .then((res) => {
@@ -49,6 +50,7 @@ Promise.race([p1, p2, p3])
 
 // promise.any example
 // promise.any will wait for the first resolved/settled success.
+// if all the promises fail it'll give u an aggregated error.
 Promise.any([p1, p2, p3])
   .then((res) => {
     console.log("promise.any success ==>", res);
