@@ -10,9 +10,14 @@ const P = new Promise((resolve, reject) => {
 // async always returns a promise
 
 async function getData() {
-  return P;
+  // in this async/await scenario JS engine stops the execution at this line until the promise is resolved  
+  const promValue = await P;
+  console.log("promValue1", promValue);
+  console.log("code after promise");
 }
 
-const dataPromise = getData();
+getData();
 
-dataPromise.then((res) => console.log(res));
+// const dataPromise = getData();
+
+// dataPromise.then((res) => console.log(res));
