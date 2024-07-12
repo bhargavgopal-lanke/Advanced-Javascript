@@ -7,6 +7,13 @@ const P = new Promise((resolve, reject) => {
   }, 5000);
 });
 
+// create second promise
+const P2 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("Promise resolved");
+  }, 5000);
+});
+
 // async always returns a promise
 
 async function getData() {
