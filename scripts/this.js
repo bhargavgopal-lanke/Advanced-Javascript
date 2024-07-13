@@ -25,3 +25,14 @@ window.x();
 // if the function is called under non strict mode this will return window.
 
 // in the global space this will always return the window
+
+// this inside a objects method
+
+const obj = {
+  a: 10,
+  x: function () {
+    console.log("this value in obj", this.a);
+  },
+};
+
+obj.x();
