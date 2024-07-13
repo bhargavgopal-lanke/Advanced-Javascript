@@ -31,8 +31,11 @@ window.x();
 const obj = {
   a: 10,
   x: function () {
-    console.log("this value in obj", this.a);
+    console.log("this value of x function in obj =>", this);
   },
+  b: "bhargav",
 };
 
+console.log("a =>", obj.a);
+console.log("b =>", obj.b);
 obj.x();
