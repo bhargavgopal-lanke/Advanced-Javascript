@@ -20,7 +20,7 @@ const evenOutput = newArr.filter(isEven);
 
 console.log("evenOutput", evenOutput);
 
-// give number whichj are greater than four
+// give number which are greater than four
 
 function greaterThanFour(x) {
   return x > 4;
@@ -29,3 +29,9 @@ function greaterThanFour(x) {
 const fourResult = newArr.filter(greaterThanFour);
 
 console.log("fourResult", fourResult);
+
+// give number which are greater than four shorter syntax
+
+const greaterThan4 = newArr.filter((x) => x > 4);
+
+console.log("short four", greaterThan4);
