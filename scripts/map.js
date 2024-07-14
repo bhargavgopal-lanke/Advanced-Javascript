@@ -26,6 +26,6 @@ console.log("triple", tripleArray);
 
 // odd and even using a ternary operator
 
-const result = newArr.map((x) => (x % 2 == 0 ? "even" : "odd"));
+const result = arr.map((x) => (x % 2 == 0 ? "even" : "odd"));
 
 console.log("result", result);
