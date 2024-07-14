@@ -8,6 +8,16 @@ const doubleArray = arr.map((double) => {
 
 console.log("double", doubleArray);
 
+// convert the double array into binary
+
+function binary(x) {
+  return x.toString(2);
+}
+
+const doubleBinary = arr.map(binary);
+
+console.log("binary", doubleBinary);
+
 // make double of the above array
 
 const tripleArray = arr.map((double) => double * 3);
