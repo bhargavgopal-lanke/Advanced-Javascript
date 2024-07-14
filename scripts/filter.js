@@ -2,22 +2,20 @@ const newArr = [5, 2, 3, 1, 6];
 
 // filter odd values
 
-function odd(x) {
+function isOdd(x) {
   return x % 2 !== 0;
 }
 
-const oddOutput = newArr.filter(odd);
+const oddOutput = newArr.filter(isOdd);
 
 console.log("oddOutput", oddOutput);
 
 // filter odd values
 
-function even(x) {
+function isEven(x) {
   return x % 2 == 0;
 }
 
-const evenOutput = newArr.filter(even);
+const evenOutput = newArr.filter(isEven);
 
 console.log("evenOutput", evenOutput);
-
-
