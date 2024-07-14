@@ -7,3 +7,9 @@ const doubleArray = arr.map((double) => {
 });
 
 console.log("double", doubleArray);
+
+// make double of the above array
+
+const tripleArray = arr.map((double) => double * 3);
+
+console.log("triple", tripleArray);
