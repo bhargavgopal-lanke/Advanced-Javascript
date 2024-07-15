@@ -1,3 +1,5 @@
+import { users } from "../helper/Data.js";
+
 const reduceArray = [5, 2, 3, 1, 6, 11, 20];
 
 function reduceFunction(x) {
@@ -44,3 +46,28 @@ const maxNumReduce = reduceArray.reduce((acc, curr) => {
 }, 0);
 
 console.log("maxNumReduce", maxNumReduce);
+
+// get list of full names map method
+
+const fullNameList = users.map(
+  (fullNames) => fullNames.firstName + " " + fullNames.lastname
+);
+
+console.log("list", fullNameList);
+
+// how many have age 28
+// the initial value of the accumulator is an empty object
+// acc = {26: 2, 25: 1}
+
+const age28 = users.reduce((acc, curr) => {
+  // check if accumulator of current age (26) is present or not
+  // there could be a case where 26 is not present in the acc object
+  if (acc[curr.age]) {
+    acc[curr.age] = ++acc[curr.age];
+  } else {
+    acc[curr.age] = 1;
+  }
+  return acc;
+}, {});
+
+console.log("get person age", age28);
