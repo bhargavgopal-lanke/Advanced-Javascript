@@ -33,3 +33,17 @@ function findMaxNum(x) {
 }
 
 console.log("max number", findMaxNum(reduceArray));
+
+// find max number in an array
+
+function findLessNum(x) {
+  let max = 0;
+  for (let i = 0; i < x.length; i++) {
+    if (x[i] < max) {
+      max = x[i];
+    }
+  }
+  return max;
+}
+
+console.log("max number", findMaxNum(reduceArray));
