@@ -23,3 +23,9 @@ console.log("binary", doubleBinary);
 const tripleArray = arr.map((double) => double * 3);
 
 console.log("triple", tripleArray);
+
+// odd and even using a ternary operator
+
+const result = arr.map((x) => (x % 2 == 0 ? "even" : "odd"));
+
+console.log("result", result);
