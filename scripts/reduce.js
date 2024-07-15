@@ -81,10 +81,11 @@ const listOfPeopleAgeLessThan30 = users
 console.log("age less than 30", listOfPeopleAgeLessThan30);
 
 // filter out te list of all the people whose age is less than 30 using reduce method
-
+// if acc is an array we have to push the items into the array
+// if the acc is a string we have to assign the text to the string
 const ageLessThanReduce = users.reduce((acc, curr) => {
   if (curr.age < 30) {
-    acc = acc + " " + curr.firstName;
+    acc.push(curr.firstName);
   }
   return acc;
 }, []);
