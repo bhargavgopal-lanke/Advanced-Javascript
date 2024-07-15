@@ -79,3 +79,14 @@ const listOfPeopleAgeLessThan30 = users
   .map((x) => x.firstName);
 
 console.log("age less than 30", listOfPeopleAgeLessThan30);
+
+// filter out te list of all the people whose age is less than 30 using reduce method
+
+const ageLessThanReduce = users.reduce((acc, curr) => {
+  if (curr.age < 30) {
+    acc = acc + " " + curr.firstName;
+  }
+  return acc;
+}, []);
+
+console.log("ageLessThanReduce", ageLessThanReduce);
