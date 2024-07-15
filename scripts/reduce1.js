@@ -36,6 +36,7 @@ console.log("totalPrice", totalPrice);
 
 // claculate the price of all the items using reduce method
 // reduce method takes an array of values and reduces it to one single value
+// accumulator is the previous value returned from reduce method.
 
 const totalItemsPriceReduce = items.reduce((acc, curr) => {
   acc += curr.price;
@@ -43,3 +44,36 @@ const totalItemsPriceReduce = items.reduce((acc, curr) => {
 }, 0);
 
 console.log("totalItemsPriceReduce", totalItemsPriceReduce);
+
+// get users who are with the same name using reduce method
+
+const People = [
+  {
+    name: "Bhargav",
+    age: 28,
+  },
+  {
+    name: "John",
+    age: 26,
+  },
+  {
+    name: "Gopal",
+    age: 25,
+  },
+  {
+    name: "Hussain",
+    age: 28,
+  },
+];
+
+const groupPeopleReducer = People.reduce((acc, person) => {
+  console.log("test", acc[person.age]);
+
+  if (acc[person.age] == null) {
+    acc[person.age] = [];
+  }
+  acc[person.age].push(person);
+  return acc;
+}, {});
+
+console.log("groupPeopleReducer", groupPeopleReducer);
