@@ -41,6 +41,6 @@ const maxNumReduce = reduceArray.reduce((acc, curr) => {
     acc = curr;
   }
   return acc;
-});
+}, 0);
 
 console.log("maxNumReduce", maxNumReduce);
