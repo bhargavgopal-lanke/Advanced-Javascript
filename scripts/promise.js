@@ -1,3 +1,4 @@
+
 // dummy promises
 const p1 = new Promise((resolve, reject) => {
 //   setTimeout(() => resolve("P1 success"), 3000);
@@ -23,7 +24,55 @@ Promise.all([p1, p2, p3])
   .catch((err) => {
     // if we console.error it'll look like an error.
     console.error("promise.all fail ==>", err);
+
+const cart = ["shoes", "pants", "lehanga"];
+
+const gitHubUrl = "https://api.github.com/users/akshaymarch7";
+
+let response;
+// fetch functions return us a prmoise
+const userObject = fetch(gitHubUrl);
+
+console.log("userObject", userObject);
+
+const promise = createOrder(cart);
+
+promise
+  .then(function (orderId) {
+    console.log(orderId);
+  })
+  .catch(function (err) {
+    console.log(err.message);
   });
+
+// this is another way to create a promise
+// Producer end
+// resolve and reject parameters are given by javascript.
+
+function createOrder() {
+  const promise = new Promise(function (resolve, reject) {
+    // so our promise should return a success or failure.
+
+    // create order
+    // validate order
+    // orderId
+    if (!validateCart(cart)) {
+      const err = new Error("Cart is not valid");
+      reject(err);
+    }
+
+    // logic for create order
+    const orderId = "12345";
+    if (orderId) {
+      setTimeout(function () {
+        resolve(orderId);
+      }, 5000);
+    }
+
+  });
+  return promise;
+}
+
 
 // promise.allsetteled example
 // it'll wait for all the promises and return the combined result.
@@ -61,3 +110,8 @@ Promise.any([p1, p2, p3])
     console.error("promise.any fail ==>", err);
     console.error("promise.any fail ==>", err.errors);
   });
+
+function validateCart(cart) {
+  return false;
+}
+
