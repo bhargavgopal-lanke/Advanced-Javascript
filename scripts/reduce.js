@@ -19,3 +19,17 @@ let reduceResult = reduceArray.reduce((acc, curr) => {
 }, 0);
 
 console.log("reduceResult", reduceResult);
+
+// find max number in an array
+
+function findMaxNum(x) {
+  let max = 0;
+  for (let i = 0; i < x.length; i++) {
+    if (x[i] > max) {
+      max = x[i];
+    }
+  }
+  return max;
+}
+
+console.log("max number", findMaxNum(reduceArray));
