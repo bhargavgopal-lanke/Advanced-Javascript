@@ -77,3 +77,29 @@ const groupPeopleReducer = People.reduce((acc, person) => {
 }, {});
 
 console.log("groupPeopleReducer", groupPeopleReducer);
+
+// find the sum of all materials req to build a house
+
+const materials = [
+  {
+    name: "Brick",
+    cost: 3000,
+  },
+  {
+    name: "Plaster",
+    cost: 24000,
+  },
+  {
+    name: "Wood",
+    cost: 50000,
+  },
+];
+
+const materialSum = materials.reduce((acc, curr) => {
+  console.log("acc", acc);
+  console.log("curr.cost", curr.cost);
+  acc += curr.cost;
+  return acc;
+}, 0);
+
+console.log("materialSum", materialSum);
