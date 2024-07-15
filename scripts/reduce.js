@@ -34,16 +34,13 @@ function findMaxNum(x) {
 
 console.log("max number", findMaxNum(reduceArray));
 
-// find max number in an array
+// find max number in an array using reduce method
 
-function findLessNum(x) {
-  let max = 0;
-  for (let i = 0; i < x.length; i++) {
-    if (x[i] < max) {
-      max = x[i];
-    }
+const maxNumReduce = reduceArray.reduce((acc, curr) => {
+  if (curr > acc) {
+    acc = curr;
   }
-  return max;
-}
+  return acc;
+});
 
-console.log("max number", findMaxNum(reduceArray));
+console.log("maxNumReduce", maxNumReduce);
