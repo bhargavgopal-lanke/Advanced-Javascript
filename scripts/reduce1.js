@@ -103,3 +103,22 @@ const materialSum = materials.reduce((acc, curr) => {
 }, 0);
 
 console.log("materialSum", materialSum);
+
+// convert a two-dimentional array  of key-value pairs into an object
+
+const keyValuePairs = [
+  ["username", "Bhargav"],
+  ["membership", "1996-05-05"],
+  ["age", 27],
+];
+
+const keyValueResult = keyValuePairs.reduce((acc, curr) => {
+  let key = curr[0];
+  let value = curr[1];
+  // assigning the property to the object
+  acc[key] = value;
+  // return the object
+  return acc;
+}, {});
+
+console.log("keyValueResult", keyValueResult);
