@@ -122,3 +122,37 @@ const keyValueResult = keyValuePairs.reduce((acc, curr) => {
 }, {});
 
 console.log("keyValueResult", keyValueResult);
+
+// get the highest salary from the below users list
+
+const highestSalaryPerson = [
+  {
+    name: "Bhargav",
+    occupation: "Software Developer",
+    salary: 92000,
+  },
+  {
+    name: "Gopal",
+    occupation: "Software Developer",
+    salary: 100001,
+  },
+  {
+    name: "Hussain",
+    occupation: "Software Developer",
+    salary: 40000,
+  },
+  {
+    name: "Raheem",
+    occupation: "Software Developer",
+    salary: 25000,
+  },
+];
+
+const highestSalaryReduce = highestSalaryPerson.reduce((acc, curr) => {
+  if (curr.salary > acc) {
+    acc = curr.salary;
+  }
+  return acc;
+}, 0);
+
+console.log("highestSalaryReduce", highestSalaryReduce);
