@@ -122,3 +122,55 @@ const keyValueResult = keyValuePairs.reduce((acc, curr) => {
 }, {});
 
 console.log("keyValueResult", keyValueResult);
+
+// get the highest salary from the below users list
+
+const highestSalaryPerson = [
+  {
+    name: "Bhargav",
+    occupation: "Software Developer",
+    salary: 92000,
+  },
+  {
+    name: "Gopal",
+    occupation: "Software Developer",
+    salary: 100001,
+  },
+  {
+    name: "Hussain",
+    occupation: "Software Developer",
+    salary: 40000,
+  },
+  {
+    name: "Raheem",
+    occupation: "Software Developer",
+    salary: 25000,
+  },
+];
+
+const highestSalaryReduce = highestSalaryPerson.reduce((acc, curr) => {
+  if (curr.salary > acc) {
+    acc = curr.salary;
+  }
+  return acc;
+}, 0);
+
+console.log("highestSalaryReduce", highestSalaryReduce);
+
+// count the occurances of each string in an array
+
+const colors = ["green", "green", "red", "blue", "red", "red"];
+
+const occurances = colors.reduce((acc, curr) => {
+  // check the current value in the accumulator object if it's not there set the value to 1
+  // check the current value in the accumulator object if it's there increment the value
+  // accmulator of current value is the key and the assigned value is the object value
+  if (acc[curr]) {
+    acc[curr] = ++acc[curr];
+  } else {
+    acc[curr] = 1;
+  }
+  return acc;
+}, {});
+
+console.log("occurances", occurances);
