@@ -156,3 +156,21 @@ const highestSalaryReduce = highestSalaryPerson.reduce((acc, curr) => {
 }, 0);
 
 console.log("highestSalaryReduce", highestSalaryReduce);
+
+// count the occurances of each string in an array
+
+const colors = ["green", "green", "red", "blue", "red", "red"];
+
+const occurances = colors.reduce((acc, curr) => {
+  // check the current value in the accumulator object if it's not there set the value to 1
+  // check the current value in the accumulator object if it's there increment the value
+  // accmulator of current value is the key and the assigned value is the object value
+  if (acc[curr]) {
+    acc[curr] = ++acc[curr];
+  } else {
+    acc[curr] = 1;
+  }
+  return acc;
+}, {});
+
+console.log("occurances", occurances);
