@@ -73,3 +73,40 @@ const objectArrayResult = keyArrayValuePairs.reduce((acc, curr) => {
 }, {});
 
 console.log("objectArrayResult", objectArrayResult);
+
+// get users who are with the same name using reduce method
+
+const People3 = [
+  {
+    name: "Bhargav",
+    age: 28,
+  },
+  {
+    name: "Bhargav",
+    age: 28,
+  },
+  {
+    name: "John",
+    age: 26,
+  },
+  {
+    name: "Gopal",
+    age: 25,
+  },
+  {
+    name: "Hussain",
+    age: 28,
+  },
+];
+
+const usersWithSameNameReducer = People3.reduce((acc, curr) => {
+  // if the accumulator of current name is null then return an emty array
+  if (acc[curr.name] == null) {
+    acc[curr.name] = [];
+  }
+  // inside the accumulator object with object key name pushing the persons with the same age.
+  acc[curr.name].push(curr.age);
+  return acc;
+}, {});
+
+console.log("usersWithSameNameReducer", usersWithSameNameReducer);
