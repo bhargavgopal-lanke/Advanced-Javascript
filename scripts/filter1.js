@@ -13,3 +13,11 @@ console.log("ageFilter", ageFilter);
 const ageFilter1 = ages.filter((age) => age > 18);
 
 console.log("ageFilter1", ageFilter1);
+
+// find the length of the word which is above 6
+
+const words = ["apple", "orange", "banana", "kiwi", "pear", "coconut"];
+
+const wordsResult = words.filter((x) => x.length >= 6);
+
+console.log("wordsResult", wordsResult);
