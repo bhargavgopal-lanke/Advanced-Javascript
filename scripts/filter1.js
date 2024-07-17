@@ -10,6 +10,6 @@ console.log("ageFilter", ageFilter);
 
 // example to find out the users list greter than or equal to 18 years age from an array
 
-const ageFilter1 = ages.filter((age) => age >= 18);
+const ageFilter1 = ages.filter((age) => age > 18);
 
 console.log("ageFilter1", ageFilter1);
