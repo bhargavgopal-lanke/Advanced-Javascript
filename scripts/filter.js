@@ -13,7 +13,7 @@ console.log("oddOutput", oddOutput);
 // filter odd values
 
 function isEven(x) {
-  return x % 2 == 0;
+  return x % 2 === 0;
 }
 
 const evenOutput = newArr.filter(isEven);

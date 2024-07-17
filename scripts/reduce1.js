@@ -35,7 +35,7 @@ items.forEach((item) => {
 console.log("totalPrice", totalPrice);
 
 // claculate the price of all the items using reduce method
-// reduce method takes an array of values and reduces it to one single value
+// reduce method takes an array of values and reduces it to one single value which is the acuumulated result
 // accumulator is the previous value returned from reduce method.
 
 const totalItemsPriceReduce = items.reduce((acc, curr) => {
@@ -43,9 +43,11 @@ const totalItemsPriceReduce = items.reduce((acc, curr) => {
   return acc;
 }, 0);
 
+// zero in the above line is the initial value
+
 console.log("totalItemsPriceReduce", totalItemsPriceReduce);
 
-// get users who are with the same name using reduce method
+// get users who are with the same age using reduce method
 
 const People = [
   {
@@ -67,8 +69,6 @@ const People = [
 ];
 
 const groupPeopleReducer = People.reduce((acc, person) => {
-  console.log("test", acc[person.age]);
-
   if (acc[person.age] == null) {
     acc[person.age] = [];
   }
@@ -170,6 +170,7 @@ const occurances = colors.reduce((acc, curr) => {
   } else {
     acc[curr] = 1;
   }
+  // return the previous value
   return acc;
 }, {});
 
