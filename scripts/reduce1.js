@@ -43,6 +43,8 @@ const totalItemsPriceReduce = items.reduce((acc, curr) => {
   return acc;
 }, 0);
 
+// zero in the above line is the initial value
+
 console.log("totalItemsPriceReduce", totalItemsPriceReduce);
 
 // get users who are with the same name using reduce method
@@ -67,8 +69,6 @@ const People = [
 ];
 
 const groupPeopleReducer = People.reduce((acc, person) => {
-  console.log("test", acc[person.age]);
-
   if (acc[person.age] == null) {
     acc[person.age] = [];
   }
