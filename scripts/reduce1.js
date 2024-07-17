@@ -35,7 +35,7 @@ items.forEach((item) => {
 console.log("totalPrice", totalPrice);
 
 // claculate the price of all the items using reduce method
-// reduce method takes an array of values and reduces it to one single value
+// reduce method takes an array of values and reduces it to one single value which is the acuumulated result
 // accumulator is the previous value returned from reduce method.
 
 const totalItemsPriceReduce = items.reduce((acc, curr) => {
