@@ -47,7 +47,7 @@ const totalItemsPriceReduce = items.reduce((acc, curr) => {
 
 console.log("totalItemsPriceReduce", totalItemsPriceReduce);
 
-// get users who are with the same name using reduce method
+// get users who are with the same age using reduce method
 
 const People = [
   {
