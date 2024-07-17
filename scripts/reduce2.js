@@ -46,3 +46,30 @@ const datesReduce = dates.reduce((acc, curr) => {
 }, dates[0]);
 
 console.log("datesReduce", datesReduce);
+
+const keyArrayValuePairs = [
+  "username",
+  "Bhargav",
+  "membership",
+  "1996-05-05",
+  "age",
+  27,
+];
+
+let currArray = [];
+
+const objectArrayResult = keyArrayValuePairs.reduce((acc, curr) => {
+  let key;
+  let val;
+  currArray.push(curr);
+
+  for (let i = 0; i < currArray.length; i++) {
+    key = currArray[i];
+    val = currArray[++i];
+  }
+
+  acc[key] = val;
+  return acc;
+}, {});
+
+console.log("objectArrayResult", objectArrayResult);
