@@ -170,6 +170,7 @@ const occurances = colors.reduce((acc, curr) => {
   } else {
     acc[curr] = 1;
   }
+  // return the previous value
   return acc;
 }, {});
 
