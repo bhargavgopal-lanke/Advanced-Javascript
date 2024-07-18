@@ -1,6 +1,8 @@
 // using callback is a powerful way to do asynchronous thing in js
 // so we can take a peice of code inside a function and we can pass it as a callback
-// which can  be executed later point of time.
+
+// which can be executed later point of time.
+
 setTimeout(function () {
   console.log("callback");
 }, 5000);
@@ -20,6 +22,7 @@ const cart = ["shoes", "cars", "bikes"];
 // });
 
 // callback hell with promise
+
 // createOrder(cart)
 //   // what ever is the response of createOrder should pass into this below chain
 //   .then(function (orderId) {
@@ -51,6 +54,7 @@ function createOrder(cart) {}
 //   .then((orderId) => proceedToPayment(orderId))
 //   .then((paymentInfo) => showSummaryPage(paymentInfo))
 //   .then((paymentInfo) => updateWalletBalance(paymentInfo));
+
 
 // find how many times the user has clicked the button
 
