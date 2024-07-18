@@ -20,22 +20,28 @@ const cart = ["shoes", "cars", "bikes"];
 // });
 
 // callback hell with promise
-createOrder(cart)
-  // what ever is the response of createOrder should pass into this below chain
-  .then(function (orderId) {
-    return proceedToPayment(orderId);
-  })
-  // whatever is the response of proceedToPayment should pass into the below chain
-  .then(function (paymentInfo) {
-    return showSummaryPage(paymentInfo);
-  })
-  // whatever is the response of showSummaryPage should pass into the below chain
-  .then(function (paymentInfo) {
-    console.log(paymentInfo);
-  })
-  .catch(function (err) {
-    console.log(err.message);
-  });
+// createOrder(cart)
+//   // what ever is the response of createOrder should pass into this below chain
+//   .then(function (orderId) {
+//     return proceedToPayment(orderId);
+//   })
+//   .catch(function (err) {
+//     console.error("Error during payment:", err);
+//   })
+//   // whatever is the response of proceedToPayment should pass into the below chain
+//   .then(function (paymentInfo) {
+//     return showSummaryPage(paymentInfo);
+//   })
+//   .catch(function (err) {
+//     console.error("Error during summary:", err);
+//   })
+//   // whatever is the response of showSummaryPage should pass into the below chain
+//   .then(function (paymentInfo) {
+//     console.log(paymentInfo);
+//   })
+//   .catch(function (err) {
+//     console.log(err.message);
+//   });
 
 function createOrder(cart) {}
 
