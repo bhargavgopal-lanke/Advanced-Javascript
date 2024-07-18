@@ -47,3 +47,9 @@ function createOrder(cart) {}
 //   .then((paymentInfo) => updateWalletBalance(paymentInfo));
 
 // find how many times the user has clicked the button
+
+let buttonId = document.getElementById("clickMe");
+let count = 0;
+buttonId.addEventListener("click", () => {
+  console.log("Count Inceremnt on each click", ++count);
+});
