@@ -22,6 +22,7 @@ const P2 = new Promise((resolve, reject) => {
 
 async function getData() {
   // in this async/await scenario JS engine stops the execution at this line until the promise is resolved
+  // await can't be called without async.
   const promValue = await P;
   console.log("promValue1", promValue);
   console.log("code after promise");
