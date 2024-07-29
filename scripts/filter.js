@@ -1,6 +1,7 @@
 const newArr = [5, 2, 3, 1, 6, 11, 20];
 
 // filter odd values
+// numbers which are not divisible by 2 are odd numbers
 
 function isOdd(x) {
   return x % 2 !== 0;
@@ -10,7 +11,8 @@ const oddOutput = newArr.filter(isOdd);
 
 console.log("oddOutput", oddOutput);
 
-// filter odd values
+// filter even values
+// numbers which are divisible by 2 are even numbers
 
 function isEven(x) {
   return x % 2 === 0;
