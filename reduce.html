@@ -11,12 +11,20 @@
     <script>
       // Example 1
       // Add all the numbers in an array.
-      const reduceArray = [5, 2, 3, 1, 6, 11, 20];
+      const reduceArray = [5, 2, 3, 1, 6, 11, 20, 2];
       let max = 0;
       for (let i = 0; i < reduceArray.length; i++) {
         max = max + reduceArray[i];
       }
-      console.log(max);
+
+      //// Add all the numbers in an array using reduce method
+
+      const addAllNumbers = reduceArray.reduce((acc, curr) => {
+        acc = acc + curr;
+        return acc;
+      }, 0);
+
+      console.log("addAllNumbers", addAllNumbers);
     </script>
   </body>
 </html>
