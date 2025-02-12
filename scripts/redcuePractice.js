@@ -37,15 +37,23 @@ const findMaxNumreduceResult = reduceArray.reduce((acc, curr) => {
 
 // console.log("findMaxNumreduceResult", findMaxNumreduceResult);
 
+//Example 3
 // find the list of users with the same age group using reduce method
 
 const rest = users.reduce((acc, curr) => {
-  if(acc[curr.age]) {
+  if (acc[curr.age]) {
     acc[curr.age] = ++acc[curr.age];
   } else {
-    acc[curr.age] = 1
+    acc[curr.age] = 1;
   }
   return acc;
 }, {});
 
-console.log("rest", rest);
+// console.log("rest", rest);
+
+// Example 4
+// find the list of people whose age is less than 30
+
+const ageLessThanThirty = users.map((x) => x.age).filter((x) => x < 30);
+
+console.log("rest", ageLessThanThirty);
