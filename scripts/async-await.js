@@ -3,7 +3,7 @@
 
 const P = new Promise((resolve, reject) => {
   // if the timer is set for 5 secs after 5 secs this promise will be resolved.
-  // if the timer for first promise is 10 secs and second one is 5 secs both will execue at the same time.
+  // if the timer for first promise is 10 secs and second one is 5 secs both will execute at the same time.
   // In case of promises the code execution will not stop at the promise line.
   setTimeout(() => {
     resolve("Promise resolved");
