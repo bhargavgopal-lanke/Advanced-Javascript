@@ -55,10 +55,27 @@ const rest = users.reduce((acc, curr) => {
 // find the list of people whose age is less than 30
 
 const ageLessThanThirty = users.reduce((acc, curr) => {
-  if(curr.age < 30) {
+  if (curr.age < 30) {
     acc.push(curr.age);
   }
   return acc;
 }, []);
 
-console.log("rest", ageLessThanThirty);
+// console.log("rest", ageLessThanThirty);
+
+// Example 5
+// convert an array of arrays into key value pairs.
+const keyValuePairs = [
+  ["username", "Bhargav"],
+  ["membership", "1996-05-08"],
+  ["age", 29],
+];
+
+const keyValueResult = keyValuePairs.reduce((acc, curr) => {
+  let key = curr[0];
+  let value = curr[1];
+  acc[key] = value;
+  return acc;
+}, {});
+
+console.log("keyValueResult", keyValueResult);

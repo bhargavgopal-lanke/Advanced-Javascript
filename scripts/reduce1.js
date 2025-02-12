@@ -108,8 +108,8 @@ console.log("materialSum", materialSum);
 
 const keyValuePairs = [
   ["username", "Bhargav"],
-  ["membership", "1996-05-05"],
-  ["age", 27],
+  ["membership", "1996-05-08"],
+  ["age", 29],
 ];
 
 const keyValueResult = keyValuePairs.reduce((acc, curr) => {
