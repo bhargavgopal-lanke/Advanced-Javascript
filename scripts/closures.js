@@ -3,7 +3,7 @@ function outer() {
   function x(b) {
     var a = 10;
     function inner() {
-      console.log(a, b, c);
+      alert(a, b, c);
     }
     return inner;
   }
